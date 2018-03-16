@@ -57,6 +57,14 @@ app.get('/about', (req, res) => {
 
 });
 
+app.get('/project', (req, res, next) => {
+
+    res.render('projects.hbs', {
+        pageTitle: 'My projects',
+    })
+
+})
+
 app.get('/bad', (req, res) => res.send({ errorMessage: 'Unable to fulfill your request' }));
 
 app.listen(port, () => {
